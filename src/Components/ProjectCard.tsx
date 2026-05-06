@@ -4,14 +4,14 @@ import {
   shorthands,
   tokens,
 } from "@fluentui/react-components";
-import { ArrowRightRegular } from "@fluentui/react-icons"; // Optional: Add an icon!
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
     position: "relative",
     width: "100%",
-    height: "250px",
+    aspectRatio: "4/3",
+    // height: "250px",
     ...shorthands.borderRadius(tokens.borderRadiusMedium),
     ...shorthands.overflow("hidden"),
     boxShadow: tokens.shadow16,
@@ -54,7 +54,7 @@ export function ProjectCard({
   const navigate = useNavigate();
   return (
     <div className={styles.card}>
-      {/* <img src={dummyPhoto2} alt={title} className={styles.image} /> */}
+      <img src={imageUrl} alt={title} className={styles.image} />
 
       <div className={styles.footer}>
         <span className={styles.title}>{title}</span>
@@ -84,20 +84,6 @@ export function ProjectCard({
             </svg>
           </div>
         </button>
-
-        {/* <button
-                    className="!bg-white group relative inline-flex h-6 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]"
-                    onClick={() => navigate(`/project/${id}`)}>
-                    Go to project
-                </button> */}
-        {/* <Button
-                    appearance="primary"
-                    icon={<ArrowRightRegular />}
-                    size="small"
-                    onClick={() => navigate(`/project/${id}`)}
-                >
-                    View Project
-                </Button> */}
       </div>
     </div>
   );

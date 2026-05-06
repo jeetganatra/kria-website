@@ -38,17 +38,17 @@ const BannerCard: React.FC<{
   return (
     <CarouselCard
       autoSize
-      className="rounded-xl shadow-md h-[450px] text-left relative !w-[90vw] !max-w-[900px]"
+      className="rounded-xl shadow-md h-[75vh] max-h-[600px] text-left relative !w-[85vw]"
       aria-label={`${index + 1} of ${carouselCards.length}`}
     >
       <Image
         fit="cover"
         src={imageSrc}
         role="presentation"
-        className="!rounded-md"
+        className="!rounded-md !w-full !h-full"
       />
 
-      <div className="!bg-[#E1E5EE] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md bg-white px-3 py-1 w-[50%]">
+      <div className="!bg-[#E1E5EE] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md bg-white px-3 py-1 w-[40%]">
         <div className="text-xl font-semibold whitespace-nowrap">
           {children}
         </div>
@@ -103,13 +103,13 @@ export const ProjectsCarousel = (): React.ReactElement => {
           className="flex-1 pb-6"
         >
           <div className="pl-10 flex justify-between items-center gap-2 mb-6">
-            <Text as="h1" className="flex-1 m-0 !text-5xl !font-semibold">
+            <h1 className="flex-1 m-0 !text-5xl !font-semibold !font-galileo">
               Projects
-            </Text>
+            </h1>
           </div>
 
-          <CarouselViewport className="!overflow-hidden px-[5vw]">
-            <CarouselSlider className="gap-6 px-6 !items-center">
+          <CarouselViewport className="!overflow-hidden">
+            <CarouselSlider className="gap-6 px-[7.5vw] !items-center">
               {carouselCards.map((cardDetails, index) => (
                 <BannerCard
                   key={`image-${index}`}

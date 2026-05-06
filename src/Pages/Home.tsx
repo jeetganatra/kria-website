@@ -4,8 +4,8 @@ import { ContactUs } from "./ContactUs";
 export function Home() {
   return (
     <div>
-      <main style={{ padding: "2rem" }}>
-        <p style={{ paddingTop: "200px" }}>
+      <main>
+        <p style={{ paddingTop: "200px", paddingLeft: "2rem" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
           laoreet dolor, sit amet aliquam elit. Vestibulum eget metus nec purus
           sollicitudin vestibulum. Cras et diam eget tellus vehicula congue.

@@ -1,29 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 @import "tailwindcss";
 
+/* * {
+  outline: 1px solid red;
+} */
+
 @font-face {
-  font-family: "DidotBoldItalic";
-  src: url("./font/Didot\ HTF\ B16\ Bold\ Italic.otf") format("opentype");
+  font-family: "GalileoFLF-Roman";
+  src: url("./font/GalileoFLF-Roman.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-/* * {
-  font-family: 'GFS Didot', serif;
+@font-face {
+  font-family: "GalileoFLF-Roman";
+  src: url("./font/GalileoFLF-Bold.ttf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
 }
 
-body {
-  font-family: 'GFS Didot', serif;
-} */
+@font-face {
+  font-family: "RobotRegular";
+  src: url("./font/Roboto-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'GFS Didot', serif;
-} */
+
+@theme {
+  --font-sans: "RobotRegular", sans-serif;
+  --font-galileo: "GalileoFLF-Roman", serif;
+}
+
+body, p, span {
+  font-family: "RobotRegular", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, header {
+  font-family: "GalileoFLF-Roman", serif !important;
+}
 
 :root {
   --text: #6b6375;
@@ -78,7 +92,7 @@ h6 {
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;

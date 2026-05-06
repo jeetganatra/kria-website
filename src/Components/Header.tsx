@@ -4,7 +4,10 @@ export const Header = () => {
   const navigate = useNavigate();
   return (
     <header className="flex justify-between items-center p-4 bg-[#dedede] text-[#292929] shadow-lg">
-      <div className="text-2xl font-bold cursor-pointer" onClick={() => navigate('/')}>
+      <div
+        className="text-2xl font-bold cursor-pointer"
+        onClick={() => navigate("/")}
+      >
         KRiA Studio
       </div>
 
@@ -13,9 +16,8 @@ export const Header = () => {
           <li>
             <button
               role="link"
-              // className="!text-xl !text-[#292929] hover:!bg-[#bf9c95] transition-all !font-serif"
               className="text-xl relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
-              onClick={() => navigate('/')}
+              onClick={() => navigate("/")}
             >
               Home
             </button>
@@ -24,7 +26,7 @@ export const Header = () => {
             <button
               role="link"
               className="text-xl relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
-              onClick={() => navigate('/projects')}
+              onClick={() => navigate("/projects")}
             >
               Projects
             </button>
@@ -33,7 +35,7 @@ export const Header = () => {
             <button
               role="link"
               className="text-xl relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
-              onClick={() => navigate('/contact-us')}
+              onClick={() => navigate("/contact-us")}
             >
               Contact Us
             </button>

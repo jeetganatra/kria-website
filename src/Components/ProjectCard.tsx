@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   },
   title: {
     color: tokens.colorNeutralForegroundInverted,
-    fontSize: tokens.fontSizeBase400,
+    fontSize: tokens.fontSizeBase600,
     fontWeight: tokens.fontWeightSemibold,
   },
 });
@@ -60,7 +60,7 @@ export function ProjectCard({
         <span className={styles.title}>{title}</span>
 
         <button
-          className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#dedede] font-medium text-[#000000] transition-all duration-300 hover:w-32"
+          className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300 hover:w-32"
           onClick={() => navigate(`/project/${id}`)}
         >
           <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">

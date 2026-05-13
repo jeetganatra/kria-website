@@ -48,14 +48,14 @@ const BannerCard: React.FC<{
         className="!rounded-md !w-full !h-full"
       />
 
-      <div className="!bg-[#E1E5EE] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md bg-white px-3 py-1 w-[40%]">
+      <div className="!bg-[#f7f2ed] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md bg-white px-3 py-1 w-[40%]">
         <div className="text-xl font-semibold whitespace-nowrap">
           {children}
         </div>
         <div>
           <button
             onClick={() => navigate(`/project/${id}`)}
-            className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#B0BBD2] font-medium text-[#000000] transition-all duration-300 hover:shadow-md"
+            className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300 hover:shadow-md"
           >
             {/* hover:w-32 */}
             {/* <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100"> */}
@@ -93,6 +93,12 @@ const getAnnouncement: CarouselAnnouncerFunction = (
 };
 
 export const ProjectsCarousel = (): React.ReactElement => {
+  const loopedCards = [
+    carouselCards[carouselCards.length - 1], // clone of last
+    ...carouselCards,
+    carouselCards[0], // clone of first
+  ];
+
   return (
     <div className="grid grid-cols-1 grid-rows-[auto_1fr]">
       <div className="min-h-[100px]">
@@ -103,14 +109,12 @@ export const ProjectsCarousel = (): React.ReactElement => {
           className="flex-1 pb-6"
         >
           <div className="pl-10 flex justify-between items-center gap-2 mb-6">
-            <h1 className="flex-1 m-0 !text-5xl !font-semibold !font-galileo">
-              Projects
-            </h1>
+            <h1 className="flex-1 m-0 !text-5xl !font-galileo">Projects</h1>
           </div>
 
           <CarouselViewport className="!overflow-hidden">
             <CarouselSlider className="gap-6 px-[7.5vw] !items-center">
-              {carouselCards.map((cardDetails, index) => (
+              {loopedCards.map((cardDetails, index) => (
                 <BannerCard
                   key={`image-${index}`}
                   imageSrc={cardDetails.img}

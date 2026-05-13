@@ -186,7 +186,7 @@ function ResultsGallery() {
         <span className="text-sm text-gray-400">{images.length} images</span>
       </div>
 
-      <div className="grid grid-cols-2  gap-2">
+      <div className="grid grid-cols-2 gap-2 pl-50 pr-50">
         {images.map((img) => (
           <div
             key={img.id}

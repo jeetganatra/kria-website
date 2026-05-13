@@ -1,14 +1,21 @@
 import { Divider } from "@fluentui/react-components";
 import { ProjectsCarousel } from "../Components/ProjectsCarousel";
 import { ContactUs } from "./ContactUs";
+import section from "./../data/HomeSection.jpeg";
+
 export function Home() {
   return (
     <div>
       <main>
-        <p style={{ paddingTop: "200px", paddingLeft: "2rem" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
-          laoreet dolor, sit amet aliquam elit. Vestibulum eget metus nec purus
-          sollicitudin vestibulum. Cras et diam eget tellus vehicula congue.
+        <div className="w-full h-[50vh] pt-10">
+          <img
+            src={section}
+            alt={"home section"}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-xs text-right">
+          Ahmedabad Heritage Pol Documentation
         </p>
       </main>
       <Divider className="flex justify-center flex-col min-h-10" />

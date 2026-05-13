@@ -1,6 +1,12 @@
 import { Header } from "./Components/Header";
 import { Home } from "./Pages/Home";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+  HashRouter,
+} from "react-router-dom";
 import "./App.css";
 import { ProjectsPage } from "./Pages/Projects";
 import { PujyaPark } from "./Components/ProjectDetails/PujyaPark";
@@ -22,7 +28,7 @@ function ProjectRouter() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Header />
         <Routes>
@@ -32,7 +38,7 @@ function App() {
           <Route path="/project/:id" element={<ProjectRouter />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

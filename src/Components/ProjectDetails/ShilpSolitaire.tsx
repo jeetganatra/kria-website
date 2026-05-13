@@ -56,55 +56,6 @@ function ProjectOverview() {
   );
 }
 
-function ConceptDesignPictures() {
-  const sketches = [
-    {
-      id: 1,
-      title: "Ground floor plan",
-      subtitle: "Floor plan · 1:100",
-      src: "/images/ground-floor.png",
-    },
-    {
-      id: 2,
-      title: "First floor plan",
-      subtitle: "Floor plan · 1:100",
-      src: "/images/first-floor.png",
-    },
-  ];
-
-  return (
-    <div className="py-8">
-      <h2 className="text-xl font-medium text-gray-900 mb-8">
-        Concept Design Pictures
-      </h2>
-
-      {/* Sketch grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {sketches.map((sketch) => (
-          <div
-            key={sketch.id}
-            className="border border-gray-100 rounded-xl p-6 hover:bg-gray-50 transition-colors cursor-pointer"
-          >
-            <div className="bg-gray-50 rounded-lg overflow-hidden aspect-[4/3] flex items-center justify-center">
-              <img
-                src={sketch.src}
-                alt={sketch.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="mt-4">
-              <p className="text-sm font-medium text-gray-900">
-                {sketch.title}
-              </p>
-              <p className="text-xs text-gray-400 mt-0.5">{sketch.subtitle}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function ResultsGallery() {
   const images = [
     {

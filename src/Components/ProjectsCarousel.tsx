@@ -1,4 +1,4 @@
-import { Button, CarouselSlider, Image } from "@fluentui/react-components";
+import { CarouselSlider, Image } from "@fluentui/react-components";
 import {
   Carousel,
   type CarouselAnnouncerFunction,
@@ -7,7 +7,6 @@ import {
   CarouselNavButton,
   CarouselNavContainer,
   CarouselViewport,
-  Text,
 } from "@fluentui/react-components";
 import * as React from "react";
 import CarouselImagePujyaPark from "../data/ProjectImages/PujyaPark/CarouselImage.jpeg";

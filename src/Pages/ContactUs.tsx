@@ -1,5 +1,3 @@
-import Instagram from "../data/ConnectIcons/instagram.svg";
-
 export function ContactUs() {
   return (
     <div className="pt-20">

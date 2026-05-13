@@ -104,7 +104,9 @@ export const ProjectsCarousel = (): React.ReactElement => {
           className="flex-1 pb-6"
         >
           <div className="pl-10 flex justify-between items-center gap-2 mb-6">
-            <h1 className="flex-1 m-0 !text-5xl !font-galileo">Projects</h1>
+            <h1 className="flex-1 m-0 !text-3xl sm:!text-4xl md:!text-5xl !font-galileo">
+              Projects
+            </h1>
           </div>
 
           <CarouselViewport className="!overflow-hidden">

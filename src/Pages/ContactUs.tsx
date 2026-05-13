@@ -30,15 +30,19 @@ export function ContactUs() {
       </div>
       <div className="flex gap-16 px-[5%] pt-10 items-start">
         <div className="w-1/2">
-          <h1 className="m-0 !text-5xl">Contact us</h1>
+          <h1 className="m-0 !text-3xl sm:!text-4xl md:!text-5xl">
+            Contact us
+          </h1>
           <div className="pt-10">
-            <div className="grid grid-cols-[30%_auto] justify-stretch">
-              <p className="text-lg">Email</p>
-              <p className="text-lg">ar.rinishajain@gmail.com</p>
+            <div className="grid grid-cols-[40%_1fr] sm:grid-cols-[30%_1fr] justify-stretch">
+              <p className="text-sm sm:text-lg">Email</p>
+              <p className="text-sm sm:text-lg">ar.rinishajain@gmail.com</p>
             </div>
-            <div className="grid grid-cols-[30%_auto] justify-stretch pt-5">
-              <p className="text-lg">Phone number</p>
-              <p className="text-lg whitespace-nowrap">+91 9669432681</p>
+            <div className="grid grid-cols-[40%_1fr] sm:grid-cols-[30%_1fr] justify-stretch pt-5">
+              <p className="text-sm sm:text-lg">Phone number</p>
+              <p className="text-sm sm:text-lg whitespace-nowrap">
+                +91 9669432681
+              </p>
             </div>
           </div>
         </div>

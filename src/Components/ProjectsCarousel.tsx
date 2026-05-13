@@ -47,14 +47,14 @@ const BannerCard: React.FC<{
         className="!rounded-md !w-full !h-full"
       />
 
-      <div className="!bg-[#f7f2ed] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md bg-white px-3 py-1 w-[40%]">
+      <div className="!bg-[#f7f2ed] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md px-3 py-2 w-[70%] sm:w-[55%] md:w-[40%] gap-2">
         <div className="text-sm sm:text-base md:text-xl font-semibold whitespace-nowrap">
           {children}
         </div>
         <div>
           <button
             onClick={() => navigate(`/project/${id}`)}
-            className="group relative inline-flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300 hover:shadow-md"
+            className="shrink-0 inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
           >
             <div className="items-center justify-center">
               <svg

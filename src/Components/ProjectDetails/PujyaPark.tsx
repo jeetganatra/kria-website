@@ -27,9 +27,7 @@ export function PujyaPark() {
       <h1>{project.title}</h1>
       <h2>Vadodara</h2>
       <h2 className="pt-5">Client: Het Upadhyay</h2>
-      {/* <img alt={project.title} style={{ width: "100%", maxWidth: "800px" }} /> */}
       <ProjectOverview />
-      {/* <ConceptDesignPictures /> */}
       <ResultsGallery />
     </div>
   );
@@ -137,11 +135,11 @@ function ResultsGallery() {
         <span className="text-sm text-gray-400">{images.length} images</span>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 pl-50 pr-50">
+      <div className="grid grid-cols-2 gap-2 px-4 sm:px-10 md:px-20 lg:px-40">
         {images.map((img) => (
           <div
             key={img.id}
-            className={`overflow-hidden rounded-lg group cursor-pointer ${img.span === 2 ? "col-span-2" : ""}`}
+            className={`aspect-[4/3] overflow-hidden rounded-lg group cursor-pointer ${img.span === 2 ? "col-span-2" : ""}`}
             // className="aspect-[3/4] overflow-hidden rounded-lg group cursor-pointer"
           >
             <img

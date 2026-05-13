@@ -37,7 +37,7 @@ const BannerCard: React.FC<{
   return (
     <CarouselCard
       autoSize
-      className="rounded-xl shadow-md h-[75vh] max-h-[600px] text-left relative !w-[85vw]"
+      className="rounded-xl shadow-md h-[50vh] sm:h-[65vh] max-h-[600px] text-left relative !w-[85vw]"
       aria-label={`${index + 1} of ${carouselCards.length}`}
     >
       <Image
@@ -48,19 +48,15 @@ const BannerCard: React.FC<{
       />
 
       <div className="!bg-[#f7f2ed] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md bg-white px-3 py-1 w-[40%]">
-        <div className="text-xl font-semibold whitespace-nowrap">
+        <div className="text-sm sm:text-base md:text-xl font-semibold whitespace-nowrap">
           {children}
         </div>
         <div>
           <button
             onClick={() => navigate(`/project/${id}`)}
-            className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300 hover:shadow-md"
+            className="group relative inline-flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300 hover:shadow-md"
           >
-            {/* hover:w-32 */}
-            {/* <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100"> */}
-            {/* Go to project */}
-            {/* </div> */}
-            <div className="absolute right-3.5">
+            <div className="items-center justify-center">
               <svg
                 width="15"
                 height="15"

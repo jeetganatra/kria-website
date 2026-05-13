@@ -7,11 +7,11 @@ export function Home() {
   return (
     <div>
       <main>
-        <div className="w-full h-[50vh] pt-10">
+        <div className="w-full pt-10">
           <img
             src={section}
             alt={"home section"}
-            className="w-full h-full object-cover"
+            className="w-full h-auto block"
           />
         </div>
         <p className="text-xs text-right">

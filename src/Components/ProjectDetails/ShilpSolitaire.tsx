@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom";
-import { projectsData } from "../../data/projects";
+import { ProjectDetail, type ProjectImage } from "./ProjectDetail";
 import Hall1 from "../../data/ProjectImages/ShilpSolitaire/Hall_01.png";
 import DiningTable1 from "../../data/ProjectImages/ShilpSolitaire/Dining_01.png";
 import DiningTable2 from "../../data/ProjectImages/ShilpSolitaire/Dining_02.png";
@@ -19,175 +18,42 @@ import HomeTheatre1 from "../../data/ProjectImages/ShilpSolitaire/Hometheater_01
 import HomeTheatre2 from "../../data/ProjectImages/ShilpSolitaire/Hometheater_02.png";
 import Gazebo from "../../data/ProjectImages/ShilpSolitaire/Gazebo_01.jpg";
 
+const images: ProjectImage[] = [
+  { id: 1, src: Hall1, alt: "Hall", span: 2 },
+  { id: 2, src: DiningTable1, alt: "Dining Table 1", span: 1 },
+  { id: 3, src: DiningTable2, alt: "Dining Table 2", span: 1 },
+  { id: 4, src: Kitchen1, alt: "Kitchen 1", span: 1 },
+  { id: 5, src: Kitchen2, alt: "Kitchen 2", span: 1 },
+  { id: 6, src: GuestBedroom1_1, alt: "Guest Bedroom 1", span: 1 },
+  { id: 7, src: GuestBedroom1_2, alt: "Guest Bedroom 2", span: 1 },
+  { id: 8, src: Lobby1, alt: "Lobby 1", span: 2 },
+  { id: 9, src: Lobby2, alt: "Lobby 2", span: 1 },
+  { id: 10, src: ParentsBedroom1, alt: "Parents Bedroom 1", span: 1 },
+  { id: 11, src: ParentsBedroom2, alt: "Parents Bedroom 2", span: 1 },
+  { id: 12, src: GuestBedroom2_1, alt: "Guest Bedroom2 1", span: 1 },
+  { id: 13, src: GuestBedroom2_2, alt: "Guest Bedroom2 2", span: 1 },
+  { id: 14, src: MasterBedroom1, alt: "Master Bedroom 1", span: 1 },
+  { id: 15, src: MasterBedroom2, alt: "Master Bedroom 2", span: 1 },
+  { id: 16, src: HomeTheatre1, alt: "Home Theatre 1", span: 1 },
+  { id: 17, src: HomeTheatre2, alt: "Home Theatre 2", span: 1 },
+  { id: 18, src: Gazebo, alt: "Gazebo", span: 1 },
+];
+
+const overview =
+  "The clients wanted to have a modern and subtle design which looks " +
+  "elegant. All the spaces were designed to stand out on their own with " +
+  "different design features yet they all tied together seamlessly by use " +
+  "of complementing colours and textures. Different materials were used to " +
+  "achieve the aim of having unique spaces which are complete within their " +
+  "own right.";
+
 export function ShilpSolitaire() {
-  const { id } = useParams<{ id: string }>();
-
-  const project = projectsData.find((p) => p.id === Number(id));
-
-  if (!project) {
-    return <div>Project not found!</div>;
-  }
-
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>{project.title}</h1>
-      <h2>Vadodara</h2>
-      <h2 className="pt-5">Client: Hemang Chowksy</h2>
-      <ProjectOverview />
-      <ResultsGallery />
-    </div>
-  );
-}
-
-function ProjectOverview() {
-  return (
-    <div className="py-12 px-6">
-      <p className="text-sm text-gray-500 leading-relaxed">
-        The clients wanted to have a modern and subtle design which looks
-        elegant. All the spaces were designed to stand out on their own with
-        different design features yet they all tied together seamlessly by use
-        of complementing colours and textures. Different materials were used to
-        achieve the aim of having unique spaces which are complete within their
-        own right.
-      </p>
-    </div>
-  );
-}
-
-function ResultsGallery() {
-  const images = [
-    {
-      id: 1,
-      src: Hall1,
-      alt: "Interior 1",
-      span: 2,
-    },
-    {
-      id: 2,
-      src: DiningTable1,
-      alt: "Interior 2",
-      span: 1,
-    },
-    {
-      id: 3,
-      src: DiningTable2,
-      alt: "Interior 3",
-      span: 1,
-    },
-    {
-      id: 4,
-      src: Kitchen1,
-      alt: "Interior 4",
-      span: 1,
-    },
-    {
-      id: 5,
-      src: Kitchen2,
-      alt: "Interior 5",
-      span: 1,
-    },
-    {
-      id: 6,
-      src: GuestBedroom1_1,
-      alt: "Interior 6",
-      span: 1,
-    },
-    {
-      id: 7,
-      src: GuestBedroom1_2,
-      alt: "Interior 7",
-      span: 1,
-    },
-    {
-      id: 8,
-      src: Lobby1,
-      alt: "Interior 8",
-      span: 2,
-    },
-    {
-      id: 9,
-      src: Lobby2,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 10,
-      src: ParentsBedroom1,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 11,
-      src: ParentsBedroom2,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 12,
-      src: GuestBedroom2_1,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 13,
-      src: GuestBedroom2_2,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 14,
-      src: MasterBedroom1,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 15,
-      src: MasterBedroom2,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 16,
-      src: HomeTheatre1,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 17,
-      src: HomeTheatre2,
-      alt: "Interior 8",
-      span: 1,
-    },
-    {
-      id: 18,
-      src: Gazebo,
-      alt: "Interior 8",
-      span: 1,
-    },
-  ];
-
-  return (
-    <div className="py-8">
-      <div className="flex items-baseline justify-between mb-6">
-        <h2 className="text-xl font-medium text-gray-900">Results</h2>
-        <span className="text-sm text-gray-400">{images.length} images</span>
-      </div>
-
-      <div className="grid grid-cols-2 gap-2 px-4 sm:px-10 md:px-20 lg:px-40">
-        {images.map((img) => (
-          <div
-            key={img.id}
-            className={`aspect-[4/3] overflow-hidden rounded-lg group cursor-pointer ${img.span === 2 ? "col-span-2" : ""}`}
-            // className="aspect-[3/4] overflow-hidden rounded-lg group cursor-pointer"
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    <ProjectDetail
+      location="Vadodara"
+      client="Hemang Chowksy"
+      overview={overview}
+      images={images}
+    />
   );
 }

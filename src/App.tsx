@@ -1,11 +1,19 @@
 import { Header } from "./Components/Header";
 import { Home } from "./Pages/Home";
-import { Routes, Route, useParams, HashRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useParams,
+  HashRouter,
+  BrowserRouter,
+} from "react-router-dom";
 import "./App.css";
 import { ProjectsPage } from "./Pages/Projects";
 import { PujyaPark } from "./Components/ProjectDetails/PujyaPark";
 import { ContactUs } from "./Pages/ContactUs";
 import { ShilpSolitaire } from "./Components/ProjectDetails/ShilpSolitaire";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const projectComponents: Record<string, React.FC> = {
   "1": ShilpSolitaire,
@@ -20,9 +28,20 @@ function ProjectRouter() {
   return <Component />;
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>
@@ -32,7 +51,7 @@ function App() {
           <Route path="/project/:id" element={<ProjectRouter />} />
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

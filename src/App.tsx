@@ -1,12 +1,6 @@
 import { Header } from "./Components/Header";
 import { Home } from "./Pages/Home";
-import {
-  Routes,
-  Route,
-  useParams,
-  HashRouter,
-  BrowserRouter,
-} from "react-router-dom";
+import { Routes, Route, useParams, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { ProjectsPage } from "./Pages/Projects";
 import { PujyaPark } from "./Components/ProjectDetails/PujyaPark";

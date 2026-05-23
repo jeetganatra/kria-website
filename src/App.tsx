@@ -8,10 +8,12 @@ import { ContactUs } from "./Pages/ContactUs";
 import { ShilpSolitaire } from "./Components/ProjectDetails/ShilpSolitaire";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { BhavitaPark } from "./Components/ProjectDetails/BhavitaPark";
 
 const projectComponents: Record<string, React.FC> = {
   "1": ShilpSolitaire,
   "2": PujyaPark,
+  "3": BhavitaPark,
 };
 
 function ProjectRouter() {

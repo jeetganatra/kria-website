@@ -6,6 +6,7 @@ export interface ProjectImage {
   src: string;
   alt: string;
   span?: 1 | 2;
+  aspectRatio?: string;
 }
 
 interface ProjectDetailProps {
@@ -36,7 +37,9 @@ export function ProjectDetail({
 
       {/* Overview */}
       <div className="py-12 px-6">
-        <p className="text-sm text-gray-500 leading-relaxed">{overview}</p>
+        <p className="text-sm text-gray-500 leading-relaxed text-justify">
+          {overview}
+        </p>
       </div>
 
       {/* Gallery */}
@@ -50,7 +53,7 @@ export function ProjectDetail({
           {images.map((img) => (
             <div
               key={img.id}
-              className={`aspect-[4/3] overflow-hidden rounded-lg group cursor-pointer ${
+              className={`${img.aspectRatio ?? "aspect-[4/3]"} overflow-hidden rounded-lg group cursor-pointer ${
                 img.span === 2 ? "col-span-2" : ""
               }`}
             >

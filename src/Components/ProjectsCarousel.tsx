@@ -11,6 +11,7 @@ import {
 import * as React from "react";
 import CarouselImagePujyaPark from "../data/ProjectImages/PujyaPark/CarouselImage.jpeg";
 import CarouselImageShilp from "../data/ProjectImages/ShilpSolitaire/CarouselImage.png";
+import CarouselImageBhavitaPark from "../data/ProjectImages/BhavitaPark/CarouselImage.png";
 import { useNavigate } from "react-router-dom";
 
 const carouselCards = [
@@ -23,6 +24,11 @@ const carouselCards = [
     id: 2,
     name: "Pujya Park Society",
     img: CarouselImagePujyaPark,
+  },
+  {
+    id: 3,
+    name: "Bhavita Park Residence",
+    img: CarouselImageBhavitaPark,
   },
 ];
 

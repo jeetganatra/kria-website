@@ -9,34 +9,8 @@ import {
   CarouselViewport,
 } from "@fluentui/react-components";
 import * as React from "react";
-import CarouselImagePujyaPark from "../data/ProjectImages/PujyaPark/CarouselImage.jpeg";
-import CarouselImageShilp from "../data/ProjectImages/ShilpSolitaire/CarouselImage.png";
-import CarouselImageBhavitaPark from "../data/ProjectImages/BhavitaPark/CarouselImage.png";
-import CarouselImageShilpSerene from "../data/ProjectImages/ShilpSerene/Carousel.png";
 import { useNavigate } from "react-router-dom";
-
-const carouselCards = [
-  {
-    id: 1,
-    name: "Shilp Solitaire",
-    img: CarouselImageShilp,
-  },
-  {
-    id: 2,
-    name: "Pujya Park Society",
-    img: CarouselImagePujyaPark,
-  },
-  {
-    id: 3,
-    name: "Shilp Serene",
-    img: CarouselImageShilpSerene,
-  },
-  {
-    id: 4,
-    name: "Bhavita Park Residence",
-    img: CarouselImageBhavitaPark,
-  },
-];
+import { projectsData } from "../data/projects";
 
 const BannerCard: React.FC<{
   children: React.ReactNode;
@@ -50,7 +24,7 @@ const BannerCard: React.FC<{
     <CarouselCard
       autoSize
       className="rounded-xl shadow-md h-[50vh] sm:h-[65vh] max-h-[600px] text-left relative !w-[85vw]"
-      aria-label={`${index + 1} of ${carouselCards.length}`}
+      aria-label={`${index + 1} of ${projectsData.length}`}
     >
       <Image
         fit="cover"
@@ -117,14 +91,14 @@ export const ProjectsCarousel = (): React.ReactElement => {
 
           <CarouselViewport className="!overflow-hidden">
             <CarouselSlider className="gap-6 px-[7.5vw] !items-center">
-              {carouselCards.map((cardDetails, index) => (
+              {projectsData.map((cardDetails, index) => (
                 <BannerCard
                   key={`image-${index}`}
-                  imageSrc={cardDetails.img}
+                  imageSrc={cardDetails.image}
                   index={index}
                   id={cardDetails.id}
                 >
-                  {cardDetails.name}
+                  {cardDetails.title}
                 </BannerCard>
               ))}
             </CarouselSlider>

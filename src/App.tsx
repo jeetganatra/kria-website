@@ -10,12 +10,14 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { BhavitaPark } from "./Components/ProjectDetails/BhavitaPark";
 import { ShilpSerene } from "./Components/ProjectDetails/ShilpSerene";
+import { HouseOfNarratives } from "./Components/ProjectDetails/HouseOfNarratives";
 
 const projectComponents: Record<string, React.FC> = {
-  "1": ShilpSolitaire,
-  "2": PujyaPark,
-  "3": BhavitaPark,
-  "4": ShilpSerene,
+  "1": PujyaPark,
+  "2": BhavitaPark,
+  "3": ShilpSolitaire,
+  "4": HouseOfNarratives,
+  "5": ShilpSerene,
 };
 
 function ProjectRouter() {

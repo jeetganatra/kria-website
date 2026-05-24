@@ -12,6 +12,7 @@ import * as React from "react";
 import CarouselImagePujyaPark from "../data/ProjectImages/PujyaPark/CarouselImage.jpeg";
 import CarouselImageShilp from "../data/ProjectImages/ShilpSolitaire/CarouselImage.png";
 import CarouselImageBhavitaPark from "../data/ProjectImages/BhavitaPark/CarouselImage.png";
+import CarouselImageShilpSerene from "../data/ProjectImages/ShilpSerene/Carousel.png";
 import { useNavigate } from "react-router-dom";
 
 const carouselCards = [
@@ -27,6 +28,11 @@ const carouselCards = [
   },
   {
     id: 3,
+    name: "Shilp Serene",
+    img: CarouselImageShilpSerene,
+  },
+  {
+    id: 4,
     name: "Bhavita Park Residence",
     img: CarouselImageBhavitaPark,
   },
@@ -94,12 +100,6 @@ const getAnnouncement: CarouselAnnouncerFunction = (
 };
 
 export const ProjectsCarousel = (): React.ReactElement => {
-  const loopedCards = [
-    carouselCards[carouselCards.length - 1], // clone of last
-    ...carouselCards,
-    carouselCards[0], // clone of first
-  ];
-
   return (
     <div className="grid grid-cols-1 grid-rows-[auto_1fr]">
       <div className="min-h-[100px]">
@@ -117,7 +117,7 @@ export const ProjectsCarousel = (): React.ReactElement => {
 
           <CarouselViewport className="!overflow-hidden">
             <CarouselSlider className="gap-6 px-[7.5vw] !items-center">
-              {loopedCards.map((cardDetails, index) => (
+              {carouselCards.map((cardDetails, index) => (
                 <BannerCard
                   key={`image-${index}`}
                   imageSrc={cardDetails.img}

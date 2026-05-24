@@ -9,11 +9,13 @@ import { ShilpSolitaire } from "./Components/ProjectDetails/ShilpSolitaire";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { BhavitaPark } from "./Components/ProjectDetails/BhavitaPark";
+import { ShilpSerene } from "./Components/ProjectDetails/ShilpSerene";
 
 const projectComponents: Record<string, React.FC> = {
   "1": ShilpSolitaire,
   "2": PujyaPark,
   "3": BhavitaPark,
+  "4": ShilpSerene,
 };
 
 function ProjectRouter() {

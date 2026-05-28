@@ -29,7 +29,7 @@ const images: ProjectImage[] = [
 ];
 
 const overview =
-  "Aarambh Farmhouse is envisioned as a getaway home for a couple who believes in spending their time in nature. " +
+  "This Farmhouse is envisioned as a getaway home for a couple who believes in spending their time in nature. " +
   "The intervention is kept minimal so as to have maximum space for the greens to grow. The design philosophy is to merge the outdoor with the indoor, " +
   "the semi-public spaces are designed to open up into small informal courtyards which are part of the larger landscape. " +
   "The central court becomes an anchor for the entire house and can be used as a family gathering space. " +

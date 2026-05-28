@@ -26,7 +26,7 @@ const BannerCard: React.FC<{
   return (
     <CarouselCard
       autoSize
-      className="rounded-xl shadow-md h-[50vh] sm:h-[65vh] max-h-[600px] text-left relative !w-[85vw]"
+      className="rounded-xl shadow-md text-left relative !w-[85vw] aspect-[16/9]"
       aria-label={`${index + 1} of ${projectsData.length}`}
     >
       <Image

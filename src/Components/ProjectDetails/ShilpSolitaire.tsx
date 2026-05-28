@@ -1,4 +1,7 @@
-import { ProjectDetail, type ProjectImage } from "./ProjectDetail";
+import {
+  ProjectDetail,
+  type ProjectImage,
+} from "./ProjectDetail";
 import Hall1 from "../../data/ProjectImages/ShilpSolitaire/Hall_01.png";
 import DiningTable1 from "../../data/ProjectImages/ShilpSolitaire/Dining_01.png";
 import DiningTable2 from "../../data/ProjectImages/ShilpSolitaire/Dining_02.png";
@@ -20,22 +23,92 @@ import Gazebo from "../../data/ProjectImages/ShilpSolitaire/Gazebo_01.jpg";
 
 const images: ProjectImage[] = [
   { id: 1, src: Hall1, alt: "Hall", span: 2 },
-  { id: 2, src: DiningTable1, alt: "Dining Table 1", span: 1 },
-  { id: 3, src: DiningTable2, alt: "Dining Table 2", span: 1 },
-  { id: 4, src: Kitchen1, alt: "Kitchen 1", span: 1 },
-  { id: 5, src: Kitchen2, alt: "Kitchen 2", span: 1 },
-  { id: 6, src: GuestBedroom1_1, alt: "Guest Bedroom 1", span: 1 },
-  { id: 7, src: GuestBedroom1_2, alt: "Guest Bedroom 2", span: 1 },
+  {
+    id: 2,
+    src: DiningTable1,
+    alt: "Dining Table 1",
+    span: 1,
+  },
+  {
+    id: 3,
+    src: DiningTable2,
+    alt: "Dining Table 2",
+    span: 1,
+  },
+  {
+    id: 4,
+    src: Kitchen1,
+    alt: "Kitchen 1",
+    span: 1,
+  },
+  {
+    id: 5,
+    src: Kitchen2,
+    alt: "Kitchen 2",
+    span: 1,
+  },
+  {
+    id: 6,
+    src: GuestBedroom1_1,
+    alt: "Guest Bedroom 1",
+    span: 1,
+  },
+  {
+    id: 7,
+    src: GuestBedroom1_2,
+    alt: "Guest Bedroom 2",
+    span: 1,
+  },
   { id: 8, src: Lobby1, alt: "Lobby 1", span: 2 },
   { id: 9, src: Lobby2, alt: "Lobby 2", span: 1 },
-  { id: 10, src: ParentsBedroom1, alt: "Parents Bedroom 1", span: 1 },
-  { id: 11, src: ParentsBedroom2, alt: "Parents Bedroom 2", span: 1 },
-  { id: 12, src: GuestBedroom2_1, alt: "Guest Bedroom2 1", span: 1 },
-  { id: 13, src: GuestBedroom2_2, alt: "Guest Bedroom2 2", span: 1 },
-  { id: 14, src: MasterBedroom1, alt: "Master Bedroom 1", span: 1 },
-  { id: 15, src: MasterBedroom2, alt: "Master Bedroom 2", span: 1 },
-  { id: 16, src: HomeTheatre1, alt: "Home Theatre 1", span: 1 },
-  { id: 17, src: HomeTheatre2, alt: "Home Theatre 2", span: 1 },
+  {
+    id: 10,
+    src: ParentsBedroom1,
+    alt: "Parents Bedroom 1",
+    span: 1,
+  },
+  {
+    id: 11,
+    src: ParentsBedroom2,
+    alt: "Parents Bedroom 2",
+    span: 1,
+  },
+  {
+    id: 12,
+    src: GuestBedroom2_1,
+    alt: "Guest Bedroom2 1",
+    span: 1,
+  },
+  {
+    id: 13,
+    src: GuestBedroom2_2,
+    alt: "Guest Bedroom2 2",
+    span: 1,
+  },
+  {
+    id: 14,
+    src: MasterBedroom1,
+    alt: "Master Bedroom 1",
+    span: 1,
+  },
+  {
+    id: 15,
+    src: MasterBedroom2,
+    alt: "Master Bedroom 2",
+    span: 1,
+  },
+  {
+    id: 16,
+    src: HomeTheatre1,
+    alt: "Home Theatre 1",
+    span: 1,
+  },
+  {
+    id: 17,
+    src: HomeTheatre2,
+    alt: "Home Theatre 2",
+    span: 1,
+  },
   { id: 18, src: Gazebo, alt: "Gazebo", span: 1 },
 ];
 

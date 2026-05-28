@@ -1,4 +1,7 @@
-import { ProjectDetail, type ProjectImage } from "./ProjectDetail";
+import {
+  ProjectDetail,
+  type ProjectImage,
+} from "./ProjectDetail";
 import Hall1 from "../../data/ProjectImages/PujyaPark/Hall_1.jpeg";
 import Hall2 from "../../data/ProjectImages/PujyaPark/Hall_2.jpeg";
 import Hall3 from "../../data/ProjectImages/PujyaPark/Hall_3.jpeg";
@@ -20,11 +23,36 @@ const images: ProjectImage[] = [
   { id: 5, src: Hall5, alt: "Hall 5", span: 1 },
   { id: 6, src: Hall6, alt: "Hall 6", span: 1 },
   { id: 7, src: Hall7, alt: "Hall 7", span: 1 },
-  { id: 8, src: DiningTable, alt: "Dining Table", span: 2 },
-  { id: 9, src: Bedroom1, alt: "Bedroom 1", span: 2 },
-  { id: 10, src: Bedroom2, alt: "Bedroom 2", span: 1 },
-  { id: 11, src: Bedroom3, alt: "Bedroom 3", span: 1 },
-  { id: 12, src: Bedroom4, alt: "Bedroom 4", span: 1 },
+  {
+    id: 8,
+    src: DiningTable,
+    alt: "Dining Table",
+    span: 2,
+  },
+  {
+    id: 9,
+    src: Bedroom1,
+    alt: "Bedroom 1",
+    span: 2,
+  },
+  {
+    id: 10,
+    src: Bedroom2,
+    alt: "Bedroom 2",
+    span: 1,
+  },
+  {
+    id: 11,
+    src: Bedroom3,
+    alt: "Bedroom 3",
+    span: 1,
+  },
+  {
+    id: 12,
+    src: Bedroom4,
+    alt: "Bedroom 4",
+    span: 1,
+  },
 ];
 
 const overview =

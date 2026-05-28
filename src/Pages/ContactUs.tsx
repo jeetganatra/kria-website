@@ -35,11 +35,17 @@ export function ContactUs() {
           </h1>
           <div className="pt-10">
             <div className="grid grid-cols-[40%_1fr] sm:grid-cols-[30%_1fr] justify-stretch">
-              <p className="text-sm sm:text-lg">Email</p>
-              <p className="text-sm sm:text-lg">ar.rinishajain@gmail.com</p>
+              <p className="text-sm sm:text-lg">
+                Email
+              </p>
+              <p className="text-sm sm:text-lg">
+                ar.rinishajain@gmail.com
+              </p>
             </div>
             <div className="grid grid-cols-[40%_1fr] sm:grid-cols-[30%_1fr] justify-stretch pt-5">
-              <p className="text-sm sm:text-lg">Phone number</p>
+              <p className="text-sm sm:text-lg">
+                Phone number
+              </p>
               <p className="text-sm sm:text-lg whitespace-nowrap">
                 +91 9669432681, +91 8103722558
               </p>

@@ -1,4 +1,7 @@
-import { CarouselSlider, Image } from "@fluentui/react-components";
+import {
+  CarouselSlider,
+  Image,
+} from "@fluentui/react-components";
 import {
   Carousel,
   type CarouselAnnouncerFunction,
@@ -39,7 +42,9 @@ const BannerCard: React.FC<{
         </div>
         <div>
           <button
-            onClick={() => navigate(`/project/${id}`)}
+            onClick={() =>
+              navigate(`/project/${id}`)
+            }
             className="shrink-0 inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
           >
             <div className="items-center justify-center">
@@ -66,58 +71,63 @@ const BannerCard: React.FC<{
   );
 };
 
-const getAnnouncement: CarouselAnnouncerFunction = (
-  index: number,
-  totalSlides: number,
-) => {
-  return `Carousel slide ${index + 1} of ${totalSlides}`;
-};
+const getAnnouncement: CarouselAnnouncerFunction =
+  (index: number, totalSlides: number) => {
+    return `Carousel slide ${index + 1} of ${totalSlides}`;
+  };
 
-export const ProjectsCarousel = (): React.ReactElement => {
-  return (
-    <div className="grid grid-cols-1 grid-rows-[auto_1fr]">
-      <div className="min-h-[100px]">
-        <Carousel
-          circular
-          draggable
-          announcement={getAnnouncement}
-          className="flex-1 pb-6"
-        >
-          <div className="pl-10 flex justify-between items-center gap-2 mb-6">
-            <h1 className="flex-1 m-0 !text-3xl sm:!text-4xl md:!text-5xl !font-galileo">
-              Projects
-            </h1>
-          </div>
-
-          <CarouselViewport className="!overflow-hidden">
-            <CarouselSlider className="gap-6 px-[7.5vw] !items-center">
-              {projectsData.map((cardDetails, index) => (
-                <BannerCard
-                  key={`image-${index}`}
-                  imageSrc={cardDetails.image}
-                  index={index}
-                  id={cardDetails.id}
-                >
-                  {cardDetails.title}
-                </BannerCard>
-              ))}
-            </CarouselSlider>
-          </CarouselViewport>
-          <CarouselNavContainer
-            next={{ "aria-label": "go to next" }}
-            prev={{ "aria-label": "go to prev" }}
-            className="w-fit mx-auto mt-4"
+export const ProjectsCarousel =
+  (): React.ReactElement => {
+    return (
+      <div className="grid grid-cols-1 grid-rows-[auto_1fr]">
+        <div className="min-h-[100px]">
+          <Carousel
+            circular
+            draggable
+            announcement={getAnnouncement}
+            className="flex-1 pb-6"
           >
-            <CarouselNav>
-              {(index) => (
-                <CarouselNavButton
-                  aria-label={`Carousel Nav Button ${index}`}
-                />
-              )}
-            </CarouselNav>
-          </CarouselNavContainer>
-        </Carousel>
+            <div className="pl-10 flex justify-between items-center gap-2 mb-6">
+              <h1 className="flex-1 m-0 !text-3xl sm:!text-4xl md:!text-5xl !font-galileo">
+                Projects
+              </h1>
+            </div>
+
+            <CarouselViewport className="!overflow-hidden">
+              <CarouselSlider className="gap-6 px-[7.5vw] !items-center">
+                {projectsData.map(
+                  (cardDetails, index) => (
+                    <BannerCard
+                      key={`image-${index}`}
+                      imageSrc={cardDetails.image}
+                      index={index}
+                      id={cardDetails.id}
+                    >
+                      {cardDetails.title}
+                    </BannerCard>
+                  ),
+                )}
+              </CarouselSlider>
+            </CarouselViewport>
+            <CarouselNavContainer
+              next={{
+                "aria-label": "go to next",
+              }}
+              prev={{
+                "aria-label": "go to prev",
+              }}
+              className="w-fit mx-auto mt-4"
+            >
+              <CarouselNav>
+                {(index) => (
+                  <CarouselNavButton
+                    aria-label={`Carousel Nav Button ${index}`}
+                  />
+                )}
+              </CarouselNav>
+            </CarouselNavContainer>
+          </Carousel>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };

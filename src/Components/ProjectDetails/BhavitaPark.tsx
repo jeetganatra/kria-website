@@ -1,4 +1,7 @@
-import { ProjectDetail, type ProjectImage } from "./ProjectDetail";
+import {
+  ProjectDetail,
+  type ProjectImage,
+} from "./ProjectDetail";
 import GrndFloorPlan from "../../data/ProjectImages/BhavitaPark/Ground Floor Plan.jpg";
 import FirstFloorPlan from "../../data/ProjectImages/BhavitaPark/First Floor Plan.jpg";
 import SecondFloorPlan from "../../data/ProjectImages/BhavitaPark/Second Floor.jpg";
@@ -27,7 +30,12 @@ const images: ProjectImage[] = [
     span: 1,
     aspectRatio: "aspect-[5/6]",
   },
-  { id: 4, src: MainImage, alt: "Main Image", span: 1 },
+  {
+    id: 4,
+    src: MainImage,
+    alt: "Main Image",
+    span: 1,
+  },
   { id: 5, src: Scene3, alt: "Scene 3", span: 1 },
 ];
 

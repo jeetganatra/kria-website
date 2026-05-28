@@ -26,7 +26,9 @@ export const Header = () => {
             <button
               role="link"
               className="text-sm sm:text-lg md:text-2xl relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
-              onClick={() => navigate("/projects")}
+              onClick={() =>
+                navigate("/projects")
+              }
             >
               Projects
             </button>
@@ -35,7 +37,9 @@ export const Header = () => {
             <button
               role="link"
               className="text-sm sm:text-lg md:text-2xl relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
-              onClick={() => navigate("/contact-us")}
+              onClick={() =>
+                navigate("/contact-us")
+              }
             >
               Contact Us
             </button>

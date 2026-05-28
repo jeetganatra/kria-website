@@ -1,4 +1,8 @@
-import { makeStyles, shorthands, tokens } from "@fluentui/react-components";
+import {
+  makeStyles,
+  shorthands,
+  tokens,
+} from "@fluentui/react-components";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -7,7 +11,9 @@ const useStyles = makeStyles({
     width: "100%",
     aspectRatio: "4/3",
     // height: "250px",
-    ...shorthands.borderRadius(tokens.borderRadiusMedium),
+    ...shorthands.borderRadius(
+      tokens.borderRadiusMedium,
+    ),
     ...shorthands.overflow("hidden"),
     boxShadow: tokens.shadow16,
     cursor: "pointer",
@@ -27,7 +33,8 @@ const useStyles = makeStyles({
     alignItems: "center",
     padding: "16px",
     // Gradient overlay makes text readable over any image
-    background: "linear-gradient(transparent, rgba(0,0,0,0.8))",
+    background:
+      "linear-gradient(transparent, rgba(0,0,0,0.8))",
   },
   title: {
     color: tokens.colorNeutralForegroundInverted,
@@ -49,14 +56,22 @@ export function ProjectCard({
   const navigate = useNavigate();
   return (
     <div className={styles.card}>
-      <img src={imageUrl} alt={title} className={styles.image} />
+      <img
+        src={imageUrl}
+        alt={title}
+        className={styles.image}
+      />
 
       <div className={styles.footer}>
-        <span className={styles.title}>{title}</span>
+        <span className={styles.title}>
+          {title}
+        </span>
 
         <button
           className="group relative inline-flex h-[clamp(2rem,4vw,3rem)] w-[clamp(2rem,4vw,3rem)] items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
-          onClick={() => navigate(`/project/${id}`)}
+          onClick={() =>
+            navigate(`/project/${id}`)
+          }
         >
           {/* <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
             Go to project

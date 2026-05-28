@@ -11,7 +11,7 @@ export interface ProjectImage {
 
 interface ProjectDetailProps {
   location: string;
-  client: string;
+  client?: string;
   overview: string;
   images: ProjectImage[];
 }
@@ -33,7 +33,7 @@ export function ProjectDetail({
     <div style={{ padding: "40px" }}>
       <h1>{project.title}</h1>
       <h2>{location}</h2>
-      <h2 className="pt-5">Client: {client}</h2>
+      {client && <h2 className="pt-5">Client: {client}</h2>}
 
       {/* Overview */}
       <div className="py-12 px-6">

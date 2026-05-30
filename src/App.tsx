@@ -17,6 +17,7 @@ import { BhavitaPark } from "./Components/ProjectDetails/BhavitaPark";
 import { ShilpSerene } from "./Components/ProjectDetails/ShilpSerene";
 import { HouseOfNarratives } from "./Components/ProjectDetails/HouseOfNarratives";
 import { TheCourtyardHouse } from "./Components/ProjectDetails/TheCourtyardHouse";
+import { SiddhamCoolers } from "./Components/ProjectDetails/SiddhamCoolers";
 
 const projectComponents: Record<
   string,
@@ -28,6 +29,7 @@ const projectComponents: Record<
   "4": HouseOfNarratives,
   "5": ShilpSerene,
   "6": TheCourtyardHouse,
+  "7": SiddhamCoolers,
 };
 
 function ProjectRouter() {

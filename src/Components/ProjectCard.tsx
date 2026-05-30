@@ -10,7 +10,6 @@ const useStyles = makeStyles({
     position: "relative",
     width: "100%",
     aspectRatio: "4/3",
-    // height: "250px",
     ...shorthands.borderRadius(
       tokens.borderRadiusMedium,
     ),
@@ -55,7 +54,10 @@ export function ProjectCard({
   const styles = useStyles();
   const navigate = useNavigate();
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={() => navigate(`/project/${id}`)}
+    >
       <img
         src={imageUrl}
         alt={title}
@@ -69,13 +71,11 @@ export function ProjectCard({
 
         <button
           className="group relative inline-flex h-[clamp(2rem,4vw,3rem)] w-[clamp(2rem,4vw,3rem)] items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
-          onClick={() =>
-            navigate(`/project/${id}`)
-          }
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/project/${id}`);
+          }}
         >
-          {/* <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
-            Go to project
-          </div> */}
           <div className="flex items-center justify-center">
             <svg
               width="15"

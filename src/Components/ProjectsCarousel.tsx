@@ -28,6 +28,7 @@ const BannerCard: React.FC<{
       autoSize
       className="rounded-xl shadow-md text-left relative !w-[85vw] aspect-[16/9]"
       aria-label={`${index + 1} of ${projectsData.length}`}
+      onClick={() => navigate(`/project/${id}`)}
     >
       <Image
         fit="cover"
@@ -42,9 +43,10 @@ const BannerCard: React.FC<{
         </div>
         <div>
           <button
-            onClick={() =>
-              navigate(`/project/${id}`)
-            }
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/project/${id}`);
+            }}
             className="shrink-0 inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
           >
             <div className="items-center justify-center">

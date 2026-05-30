@@ -15,20 +15,56 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { projectsData } from "../data/projects";
 
+const trackEvent = (
+  eventName: string,
+  params: Record<string, unknown>,
+) => {
+  if (typeof gtag !== "undefined") {
+    gtag("event", eventName, params);
+  }
+};
+
 const BannerCard: React.FC<{
   children: React.ReactNode;
   imageSrc: string;
   index: number;
   id: number;
-}> = ({ children, imageSrc, index, id }) => {
+  title: string;
+}> = ({
+  children,
+  imageSrc,
+  index,
+  id,
+  title,
+}) => {
   const navigate = useNavigate();
+
+  // Track impression when the card mounts
+  React.useEffect(() => {
+    trackEvent("project_impression", {
+      project_id: id,
+      project_title: title,
+      source: "carousel",
+      carousel_position: index,
+    });
+  }, [id, title, index]);
+
+  const handleOpen = () => {
+    trackEvent("project_opened", {
+      project_id: id,
+      project_title: title,
+      source: "carousel",
+      carousel_position: index,
+    });
+    navigate(`/project/${id}`);
+  };
 
   return (
     <CarouselCard
       autoSize
       className="rounded-xl shadow-md text-left relative !w-[85vw] aspect-[16/9]"
       aria-label={`${index + 1} of ${projectsData.length}`}
-      onClick={() => navigate(`/project/${id}`)}
+      onClick={handleOpen}
     >
       <Image
         fit="cover"
@@ -45,7 +81,7 @@ const BannerCard: React.FC<{
           <button
             onClick={(e) => {
               e.stopPropagation();
-              navigate(`/project/${id}`);
+              handleOpen();
             }}
             className="shrink-0 inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
           >
@@ -104,6 +140,7 @@ export const ProjectsCarousel =
                       imageSrc={cardDetails.image}
                       index={index}
                       id={cardDetails.id}
+                      title={cardDetails.title}
                     >
                       {cardDetails.title}
                     </BannerCard>

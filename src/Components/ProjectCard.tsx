@@ -53,10 +53,21 @@ export function ProjectCard({
 }) {
   const styles = useStyles();
   const navigate = useNavigate();
+
+  const handleOpen = () => {
+    if (typeof gtag !== "undefined") {
+      gtag("event", "project_opened", {
+        project_id: id,
+        project_title: title,
+        source: "grid",
+      });
+    }
+    navigate(`/project/${id}`);
+  };
   return (
     <div
       className={styles.card}
-      onClick={() => navigate(`/project/${id}`)}
+      onClick={() => handleOpen()}
     >
       <img
         src={imageUrl}
@@ -73,7 +84,7 @@ export function ProjectCard({
           className="group relative inline-flex h-[clamp(2rem,4vw,3rem)] w-[clamp(2rem,4vw,3rem)] items-center justify-center overflow-hidden rounded-full bg-[#ebddd1] font-medium text-[#000000] transition-all duration-300"
           onClick={(e) => {
             e.stopPropagation();
-            navigate(`/project/${id}`);
+            handleOpen();
           }}
         >
           <div className="flex items-center justify-center">

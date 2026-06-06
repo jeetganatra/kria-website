@@ -2,16 +2,16 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import MainImage from "../../data/ProjectImages/HouseOfNarratives/Carousel.jpg";
-import Living1 from "../../data/ProjectImages/HouseOfNarratives/Living 02.jpg";
-import Living2 from "../../data/ProjectImages/HouseOfNarratives/Living 03.jpg";
-import Living3 from "../../data/ProjectImages/HouseOfNarratives/Living 04.jpg";
-import Living4 from "../../data/ProjectImages/HouseOfNarratives/Living 05.jpg";
-import Living5 from "../../data/ProjectImages/HouseOfNarratives/Living 06.jpg";
-import Pooja1 from "../../data/ProjectImages/HouseOfNarratives/Pooja 07.jpg";
-import Kitchen1 from "../../data/ProjectImages/HouseOfNarratives/08.jpg";
-import Kitchen2 from "../../data/ProjectImages/HouseOfNarratives/09.jpg";
-import Kitchen3 from "../../data/ProjectImages/HouseOfNarratives/10.jpg";
+import MainImage from "../../data/optimized/ProjectImages/HouseOfNarratives/Carousel.webp";
+import Living1 from "../../data/optimized/ProjectImages/HouseOfNarratives/Living 02.webp";
+import Living2 from "../../data/optimized/ProjectImages/HouseOfNarratives/Living 03.webp";
+import Living3 from "../../data/optimized/ProjectImages/HouseOfNarratives/Living 04.webp";
+import Living4 from "../../data/optimized/ProjectImages/HouseOfNarratives/Living 05.webp";
+import Living5 from "../../data/optimized/ProjectImages/HouseOfNarratives/Living 06.webp";
+import Pooja1 from "../../data/optimized/ProjectImages/HouseOfNarratives/Pooja 07.webp";
+import Kitchen1 from "../../data/optimized/ProjectImages/HouseOfNarratives/08.webp";
+import Kitchen2 from "../../data/optimized/ProjectImages/HouseOfNarratives/09.webp";
+import Kitchen3 from "../../data/optimized/ProjectImages/HouseOfNarratives/10.webp";
 
 const images: ProjectImage[] = [
   {

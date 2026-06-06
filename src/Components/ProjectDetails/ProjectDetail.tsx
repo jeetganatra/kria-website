@@ -5,6 +5,7 @@ import {
   useEffect,
   useCallback,
 } from "react";
+import { DeferredImage } from "../DeferredImage";
 
 export interface ProjectImage {
   id: number;
@@ -287,6 +288,9 @@ function ImageCarousel({
               key={current}
               src={images[current].src}
               alt={images[current].alt}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className={slideClass}
               style={{
                 maxWidth: "100%",
@@ -382,9 +386,11 @@ function ImageCarousel({
                 }}
                 aria-label={`Go to image ${i + 1}`}
               >
-                <img
+                <DeferredImage
                   src={img.src}
                   alt={img.alt}
+                  eager={i === current}
+                  rootMargin="120px"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -456,9 +462,11 @@ export function ProjectDetail({
               }`}
               style={{ position: "relative" }}
             >
-              <img
+              <DeferredImage
                 src={img.src}
                 alt={img.alt}
+                eager={index === 0}
+                rootMargin="500px"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
               />
               {/* Hover overlay hint */}

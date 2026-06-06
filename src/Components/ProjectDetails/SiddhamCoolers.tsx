@@ -2,11 +2,11 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import MainImage from "../../data/ProjectImages/SiddhamCoolers/Carousel.png";
-import Office_1 from "../../data/ProjectImages/SiddhamCoolers/02.png";
-import Office_2 from "../../data/ProjectImages/SiddhamCoolers/03.png";
-import Office_3 from "../../data/ProjectImages/SiddhamCoolers/04.png";
-import Office_4 from "../../data/ProjectImages/SiddhamCoolers/05.png";
+import MainImage from "../../data/optimized/ProjectImages/SiddhamCoolers/Carousel.webp";
+import Office_1 from "../../data/optimized/ProjectImages/SiddhamCoolers/02.webp";
+import Office_2 from "../../data/optimized/ProjectImages/SiddhamCoolers/03.webp";
+import Office_3 from "../../data/optimized/ProjectImages/SiddhamCoolers/04.webp";
+import Office_4 from "../../data/optimized/ProjectImages/SiddhamCoolers/05.webp";
 
 const images: ProjectImage[] = [
   {

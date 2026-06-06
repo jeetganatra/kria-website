@@ -2,24 +2,24 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import Hall1 from "../../data/ProjectImages/ShilpSolitaire/Hall_01.png";
-import DiningTable1 from "../../data/ProjectImages/ShilpSolitaire/Dining_01.png";
-import DiningTable2 from "../../data/ProjectImages/ShilpSolitaire/Dining_02.png";
-import Kitchen1 from "../../data/ProjectImages/ShilpSolitaire/Kitchen_01.png";
-import Kitchen2 from "../../data/ProjectImages/ShilpSolitaire/Kitchen_02.png";
-import GuestBedroom1_1 from "../../data/ProjectImages/ShilpSolitaire/Guest Bedroom_01.png";
-import GuestBedroom1_2 from "../../data/ProjectImages/ShilpSolitaire/Guest Bedroom_02.png";
-import Lobby1 from "../../data/ProjectImages/ShilpSolitaire/Lobby_01.png";
-import Lobby2 from "../../data/ProjectImages/ShilpSolitaire/Lobby_02.png";
-import ParentsBedroom1 from "../../data/ProjectImages/ShilpSolitaire/Parents Bedroom_01.png";
-import ParentsBedroom2 from "../../data/ProjectImages/ShilpSolitaire/Parents Bedroom_02.png";
-import GuestBedroom2_1 from "../../data/ProjectImages/ShilpSolitaire/Guest Bedroom2_01.png";
-import GuestBedroom2_2 from "../../data/ProjectImages/ShilpSolitaire/Guest Bedroom2_02.png";
-import MasterBedroom1 from "../../data/ProjectImages/ShilpSolitaire/Master Bedroom_01.png";
-import MasterBedroom2 from "../../data/ProjectImages/ShilpSolitaire/Master Bedroom_02.png";
-import HomeTheatre1 from "../../data/ProjectImages/ShilpSolitaire/Hometheater_01.png";
-import HomeTheatre2 from "../../data/ProjectImages/ShilpSolitaire/Hometheater_02.png";
-import Gazebo from "../../data/ProjectImages/ShilpSolitaire/Gazebo_01.jpg";
+import Hall1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Hall_01.webp";
+import DiningTable1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Dining_01.webp";
+import DiningTable2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Dining_02.webp";
+import Kitchen1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Kitchen_01.webp";
+import Kitchen2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Kitchen_02.webp";
+import GuestBedroom1_1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Guest Bedroom_01.webp";
+import GuestBedroom1_2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Guest Bedroom_02.webp";
+import Lobby1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Lobby_01.webp";
+import Lobby2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Lobby_02.webp";
+import ParentsBedroom1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Parents Bedroom_01.webp";
+import ParentsBedroom2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Parents Bedroom_02.webp";
+import GuestBedroom2_1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Guest Bedroom2_01.webp";
+import GuestBedroom2_2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Guest Bedroom2_02.webp";
+import MasterBedroom1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Master Bedroom_01.webp";
+import MasterBedroom2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Master Bedroom_02.webp";
+import HomeTheatre1 from "../../data/optimized/ProjectImages/ShilpSolitaire/Hometheater_01.webp";
+import HomeTheatre2 from "../../data/optimized/ProjectImages/ShilpSolitaire/Hometheater_02.webp";
+import Gazebo from "../../data/optimized/ProjectImages/ShilpSolitaire/Gazebo_01.webp";
 
 const images: ProjectImage[] = [
   { id: 1, src: Hall1, alt: "Hall", span: 2 },

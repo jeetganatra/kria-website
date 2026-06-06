@@ -2,18 +2,18 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import Hall1 from "../../data/ProjectImages/PujyaPark/Hall_1.jpeg";
-import Hall2 from "../../data/ProjectImages/PujyaPark/Hall_2.jpeg";
-import Hall3 from "../../data/ProjectImages/PujyaPark/Hall_3.jpeg";
-import Hall4 from "../../data/ProjectImages/PujyaPark/Hall_4.jpeg";
-import Hall5 from "../../data/ProjectImages/PujyaPark/Hall_5.jpeg";
-import Hall6 from "../../data/ProjectImages/PujyaPark/Hall_6.jpeg";
-import Hall7 from "../../data/ProjectImages/PujyaPark/Hall_7.jpeg";
-import DiningTable from "../../data/ProjectImages/PujyaPark/DiningTable.jpeg";
-import Bedroom1 from "../../data/ProjectImages/PujyaPark/Bedroom_1.jpeg";
-import Bedroom2 from "../../data/ProjectImages/PujyaPark/Bedroom_2.jpeg";
-import Bedroom3 from "../../data/ProjectImages/PujyaPark/Bedroom_3.jpeg";
-import Bedroom4 from "../../data/ProjectImages/PujyaPark/Bedroom_4.jpeg";
+import Hall1 from "../../data/optimized/ProjectImages/PujyaPark/Hall_1.webp";
+import Hall2 from "../../data/optimized/ProjectImages/PujyaPark/Hall_2.webp";
+import Hall3 from "../../data/optimized/ProjectImages/PujyaPark/Hall_3.webp";
+import Hall4 from "../../data/optimized/ProjectImages/PujyaPark/Hall_4.webp";
+import Hall5 from "../../data/optimized/ProjectImages/PujyaPark/Hall_5.webp";
+import Hall6 from "../../data/optimized/ProjectImages/PujyaPark/Hall_6.webp";
+import Hall7 from "../../data/optimized/ProjectImages/PujyaPark/Hall_7.webp";
+import DiningTable from "../../data/optimized/ProjectImages/PujyaPark/DiningTable.webp";
+import Bedroom1 from "../../data/optimized/ProjectImages/PujyaPark/Bedroom_1.webp";
+import Bedroom2 from "../../data/optimized/ProjectImages/PujyaPark/Bedroom_2.webp";
+import Bedroom3 from "../../data/optimized/ProjectImages/PujyaPark/Bedroom_3.webp";
+import Bedroom4 from "../../data/optimized/ProjectImages/PujyaPark/Bedroom_4.webp";
 
 const images: ProjectImage[] = [
   { id: 1, src: Hall1, alt: "Hall 1", span: 2 },

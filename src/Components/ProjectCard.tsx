@@ -4,6 +4,7 @@ import {
   tokens,
 } from "@fluentui/react-components";
 import { useNavigate } from "react-router-dom";
+import { DeferredImage } from "./DeferredImage";
 
 const useStyles = makeStyles({
   card: {
@@ -69,7 +70,7 @@ export function ProjectCard({
       className={styles.card}
       onClick={() => handleOpen()}
     >
-      <img
+      <DeferredImage
         src={imageUrl}
         alt={title}
         className={styles.image}

@@ -1,7 +1,4 @@
-import {
-  CarouselSlider,
-  Image,
-} from "@fluentui/react-components";
+import { CarouselSlider } from "@fluentui/react-components";
 import {
   Carousel,
   type CarouselAnnouncerFunction,
@@ -14,6 +11,7 @@ import {
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { projectsData } from "../data/projects";
+import { DeferredImage } from "./DeferredImage";
 
 const trackEvent = (
   eventName: string,
@@ -66,11 +64,17 @@ const BannerCard: React.FC<{
       aria-label={`${index + 1} of ${projectsData.length}`}
       onClick={handleOpen}
     >
-      <Image
-        fit="cover"
+      <DeferredImage
         src={imageSrc}
+        alt=""
+        eager={index === 0}
+        rootMargin="0px"
+        threshold={0.25}
+        width="1600"
+        height="900"
+        sizes="85vw"
         role="presentation"
-        className="!rounded-md !w-full !h-full"
+        className="!rounded-md !w-full !h-full object-cover"
       />
 
       <div className="!bg-[#f7f2ed] flex flex-row items-center justify-between absolute bottom-6 left-1/2 -translate-x-1/2 rounded-lg shadow-md px-3 py-2 w-[70%] sm:w-[55%] md:w-[40%] gap-2">

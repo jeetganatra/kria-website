@@ -2,18 +2,18 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import MainImage from "../../data/ProjectImages/ShilpSerene/Carousel.png";
-import Living1 from "../../data/ProjectImages/ShilpSerene/Living 1.png";
-import TvUnitPs from "../../data/ProjectImages/ShilpSerene/TV Unit ps.png";
-import Dining1 from "../../data/ProjectImages/ShilpSerene/Dining 1.png";
-import LiftLobby2 from "../../data/ProjectImages/ShilpSerene/Lift Lobby 2.png";
-import LiftLobbyPs from "../../data/ProjectImages/ShilpSerene/Lift lobby ps.png";
-import Kitchen1 from "../../data/ProjectImages/ShilpSerene/Kitchen 1 ps.png";
-import Kitchen2 from "../../data/ProjectImages/ShilpSerene/Kitchen 2 ps.png";
-import Kitchen3 from "../../data/ProjectImages/ShilpSerene/Kitchen 3 ps.png";
-import PujaArea from "../../data/ProjectImages/ShilpSerene/Puja Area.png";
-import Room1 from "../../data/ProjectImages/ShilpSerene/Room 1 ps.png";
-import Room2 from "../../data/ProjectImages/ShilpSerene/Room 2 ps.png";
+import MainImage from "../../data/optimized/ProjectImages/ShilpSerene/Carousel.webp";
+import Living1 from "../../data/optimized/ProjectImages/ShilpSerene/Living 1.webp";
+import TvUnitPs from "../../data/optimized/ProjectImages/ShilpSerene/TV Unit ps.webp";
+import Dining1 from "../../data/optimized/ProjectImages/ShilpSerene/Dining 1.webp";
+import LiftLobby2 from "../../data/optimized/ProjectImages/ShilpSerene/Lift Lobby 2.webp";
+import LiftLobbyPs from "../../data/optimized/ProjectImages/ShilpSerene/Lift lobby ps.webp";
+import Kitchen1 from "../../data/optimized/ProjectImages/ShilpSerene/Kitchen 1 ps.webp";
+import Kitchen2 from "../../data/optimized/ProjectImages/ShilpSerene/Kitchen 2 ps.webp";
+import Kitchen3 from "../../data/optimized/ProjectImages/ShilpSerene/Kitchen 3 ps.webp";
+import PujaArea from "../../data/optimized/ProjectImages/ShilpSerene/Puja Area.webp";
+import Room1 from "../../data/optimized/ProjectImages/ShilpSerene/Room 1 ps.webp";
+import Room2 from "../../data/optimized/ProjectImages/ShilpSerene/Room 2 ps.webp";
 
 const images: ProjectImage[] = [
   {

@@ -1,10 +1,10 @@
-import ShilpSolitaireView from "./ProjectImages/ShilpSolitaire/CarouselImage.png";
-import PujyaParkView from "./ProjectImages/PujyaPark/CarouselImage.jpeg";
-import BhavitaParkView from "./ProjectImages/BhavitaPark/Main Image.png";
-import ShilpSereneView from "./ProjectImages/ShilpSerene/Carousel.png";
-import HouseOfNarrativesView from "./ProjectImages/HouseOfNarratives/Carousel.jpg";
-import CourtyardHouseView from "./ProjectImages/CourtyardHouse/Carousel.jpg";
-import SiddhamCoolersView from "./ProjectImages/SiddhamCoolers/Carousel.png";
+import ShilpSolitaireView from "./optimized/ProjectImages/ShilpSolitaire/CarouselImage.webp";
+import PujyaParkView from "./optimized/ProjectImages/PujyaPark/CarouselImage.webp";
+import BhavitaParkView from "./optimized/ProjectImages/BhavitaPark/Main Image.webp";
+import ShilpSereneView from "./optimized/ProjectImages/ShilpSerene/Carousel.webp";
+import HouseOfNarrativesView from "./optimized/ProjectImages/HouseOfNarratives/Carousel.webp";
+import CourtyardHouseView from "./optimized/ProjectImages/CourtyardHouse/Carousel.webp";
+import SiddhamCoolersView from "./optimized/ProjectImages/SiddhamCoolers/Carousel.webp";
 
 export const projectsData = [
   {

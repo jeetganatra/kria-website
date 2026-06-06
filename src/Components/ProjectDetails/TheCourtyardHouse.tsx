@@ -2,9 +2,9 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import MainImage from "../../data/ProjectImages/CourtyardHouse/Carousel.jpg";
-import FloorPlan from "../../data/ProjectImages/CourtyardHouse/Floor Plan.jpg";
-import Sketches from "../../data/ProjectImages/CourtyardHouse/Sketches.jpg";
+import MainImage from "../../data/optimized/ProjectImages/CourtyardHouse/Carousel.webp";
+import FloorPlan from "../../data/optimized/ProjectImages/CourtyardHouse/Floor Plan.webp";
+import Sketches from "../../data/optimized/ProjectImages/CourtyardHouse/Sketches.webp";
 
 const images: ProjectImage[] = [
   {

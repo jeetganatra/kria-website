@@ -1,7 +1,7 @@
 import { Divider } from "@fluentui/react-components";
 import { ProjectsCarousel } from "../Components/ProjectsCarousel";
 import { ContactUs } from "./ContactUs";
-import section from "./../data/HomeSection.jpeg";
+import section from "./../data/optimized/HomeSection.webp";
 
 export function Home() {
   return (
@@ -11,6 +11,11 @@ export function Home() {
           <img
             src={section}
             alt={"home section"}
+            width="7400"
+            height="1859"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="w-full h-auto block"
           />
         </div>

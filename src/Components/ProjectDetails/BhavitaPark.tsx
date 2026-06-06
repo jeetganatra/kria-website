@@ -2,11 +2,11 @@ import {
   ProjectDetail,
   type ProjectImage,
 } from "./ProjectDetail";
-import GrndFloorPlan from "../../data/ProjectImages/BhavitaPark/Ground Floor Plan.jpg";
-import FirstFloorPlan from "../../data/ProjectImages/BhavitaPark/First Floor Plan.jpg";
-import SecondFloorPlan from "../../data/ProjectImages/BhavitaPark/Second Floor.jpg";
-import MainImage from "../../data/ProjectImages/BhavitaPark/Main Image.png";
-import Scene3 from "../../data/ProjectImages/BhavitaPark/Scene 3.png";
+import GrndFloorPlan from "../../data/optimized/ProjectImages/BhavitaPark/Ground Floor Plan.webp";
+import FirstFloorPlan from "../../data/optimized/ProjectImages/BhavitaPark/First Floor Plan.webp";
+import SecondFloorPlan from "../../data/optimized/ProjectImages/BhavitaPark/Second Floor.webp";
+import MainImage from "../../data/optimized/ProjectImages/BhavitaPark/Main Image.webp";
+import Scene3 from "../../data/optimized/ProjectImages/BhavitaPark/Scene 3.webp";
 
 const images: ProjectImage[] = [
   {

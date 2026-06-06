@@ -7,30 +7,76 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import "./App.css";
-import { ProjectsPage } from "./Pages/Projects";
-import { PujyaPark } from "./Components/ProjectDetails/PujyaPark";
 import { ContactUs } from "./Pages/ContactUs";
-import { ShilpSolitaire } from "./Components/ProjectDetails/ShilpSolitaire";
-import { useEffect } from "react";
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  type ComponentType,
+  type LazyExoticComponent,
+} from "react";
 import { useLocation } from "react-router-dom";
-import { BhavitaPark } from "./Components/ProjectDetails/BhavitaPark";
-import { ShilpSerene } from "./Components/ProjectDetails/ShilpSerene";
-import { HouseOfNarratives } from "./Components/ProjectDetails/HouseOfNarratives";
-import { TheCourtyardHouse } from "./Components/ProjectDetails/TheCourtyardHouse";
-import { SiddhamCoolers } from "./Components/ProjectDetails/SiddhamCoolers";
 
 const projectComponents: Record<
   string,
-  React.FC
+  LazyExoticComponent<ComponentType>
 > = {
-  "1": PujyaPark,
-  "2": BhavitaPark,
-  "3": ShilpSolitaire,
-  "4": HouseOfNarratives,
-  "5": ShilpSerene,
-  "6": TheCourtyardHouse,
-  "7": SiddhamCoolers,
+  "1": lazy(() =>
+    import(
+      "./Components/ProjectDetails/PujyaPark"
+    ).then((module) => ({
+      default: module.PujyaPark,
+    })),
+  ),
+  "2": lazy(() =>
+    import(
+      "./Components/ProjectDetails/BhavitaPark"
+    ).then((module) => ({
+      default: module.BhavitaPark,
+    })),
+  ),
+  "3": lazy(() =>
+    import(
+      "./Components/ProjectDetails/ShilpSolitaire"
+    ).then((module) => ({
+      default: module.ShilpSolitaire,
+    })),
+  ),
+  "4": lazy(() =>
+    import(
+      "./Components/ProjectDetails/HouseOfNarratives"
+    ).then((module) => ({
+      default: module.HouseOfNarratives,
+    })),
+  ),
+  "5": lazy(() =>
+    import(
+      "./Components/ProjectDetails/ShilpSerene"
+    ).then((module) => ({
+      default: module.ShilpSerene,
+    })),
+  ),
+  "6": lazy(() =>
+    import(
+      "./Components/ProjectDetails/TheCourtyardHouse"
+    ).then((module) => ({
+      default: module.TheCourtyardHouse,
+    })),
+  ),
+  "7": lazy(() =>
+    import(
+      "./Components/ProjectDetails/SiddhamCoolers"
+    ).then((module) => ({
+      default: module.SiddhamCoolers,
+    })),
+  ),
 };
+
+const ProjectsPage = lazy(() =>
+  import("./Pages/Projects").then((module) => ({
+    default: module.ProjectsPage,
+  })),
+);
 
 function ProjectRouter() {
   const { id } = useParams<{ id: string }>();
@@ -59,21 +105,23 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/projects"
-            element={<ProjectsPage />}
-          />
-          <Route
-            path="/contact-us"
-            element={<ContactUs />}
-          />
-          <Route
-            path="/project/:id"
-            element={<ProjectRouter />}
-          />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/projects"
+              element={<ProjectsPage />}
+            />
+            <Route
+              path="/contact-us"
+              element={<ContactUs />}
+            />
+            <Route
+              path="/project/:id"
+              element={<ProjectRouter />}
+            />
+          </Routes>
+        </Suspense>
       </div>
     </BrowserRouter>
   );

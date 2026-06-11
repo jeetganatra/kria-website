@@ -1,58 +1,79 @@
+import { Reveal } from "../Components/Reveal";
+
 export function ContactUs() {
   return (
-    <div className="pt-20">
-      <div className="flex justify-center">
-        <a
-          href="https://drive.google.com/file/d/1TVFeXQNlbGkHp7wamDrXd5YKs3pyvi7M/view?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex w-[80%] items-center px-6 py-1 rounded-full border cursor-pointer hover:bg-[#ebddd1]"
-        >
-          <span className="text-lg font-medium text-center w-full flex items-center justify-center gap-2">
-            Explore our work
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-            >
-              <path
-                d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </span>
-        </a>
-      </div>
-      <div className="flex gap-16 px-[5%] pt-10 items-start">
-        <div className="w-1/2">
-          <h1 className="m-0 !text-3xl sm:!text-4xl md:!text-5xl">
-            Contact us
-          </h1>
-          <div className="pt-10">
-            <div className="grid grid-cols-[40%_1fr] sm:grid-cols-[30%_1fr] justify-stretch">
-              <p className="text-sm sm:text-lg">
+    <section className="border-t border-line text-left">
+      <div className="px-6 py-16 md:px-12 md:py-24">
+        <Reveal>
+          <div className="flex items-center gap-4">
+            <span className="h-px w-10 bg-clay" />
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted md:text-xs">
+              Get in touch
+            </p>
+          </div>
+          <h2 className="mt-6 max-w-[18ch] text-4xl leading-[1.05] tracking-tight md:text-6xl">
+            Let’s shape a space{" "}
+            <em className="text-clay">
+              worth keeping.
+            </em>
+          </h2>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className="mt-12 grid grid-cols-1 gap-y-8 md:mt-16 md:grid-cols-2 md:gap-x-12">
+            <div className="border-t border-line pt-4">
+              <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
                 Email
               </p>
-              <p className="text-sm sm:text-lg">
+              <a
+                href="mailto:ar.rinishajain@gmail.com"
+                className="link-underline mt-2 inline-block font-display text-xl tracking-tight break-all md:text-3xl"
+              >
                 ar.rinishajain@gmail.com
-              </p>
+              </a>
             </div>
-            <div className="grid grid-cols-[40%_1fr] sm:grid-cols-[30%_1fr] justify-stretch pt-5">
-              <p className="text-sm sm:text-lg">
-                Phone number
+            <div className="border-t border-line pt-4">
+              <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
+                Phone
               </p>
-              <p className="text-sm sm:text-lg whitespace-nowrap">
-                +91 9669432681, +91 8103722558
+              <p className="mt-2 font-display text-xl tracking-tight md:text-3xl">
+                <a
+                  href="tel:+919669432681"
+                  className="link-underline"
+                >
+                  +91 96694 32681
+                </a>
+                <span className="px-3 text-line">
+                  /
+                </span>
+                <a
+                  href="tel:+918103722558"
+                  className="link-underline"
+                >
+                  +91 81037 22558
+                </a>
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
+
+        <Reveal delay={200}>
+          <a
+            href="https://drive.google.com/file/d/1TVFeXQNlbGkHp7wamDrXd5YKs3pyvi7M/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-12 inline-flex items-center gap-3 rounded-full border border-ink px-7 py-3 text-[11px] font-medium uppercase tracking-[0.22em] transition-colors duration-300 hover:bg-ink hover:text-paper md:mt-16"
+          >
+            Explore our portfolio
+            <span
+              aria-hidden
+              className="transition-transform duration-300 group-hover:translate-x-1.5"
+            >
+              →
+            </span>
+          </a>
+        </Reveal>
       </div>
-    </div>
+    </section>
   );
 }

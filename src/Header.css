@@ -1,9 +1,0 @@
-.my-nav-button {
-  color: #ffffff;
-  /* Your custom color */
-}
-
-.my-nav-button:hover {
-  color: #ffffff !important;
-  background-color: rgba(100, 108, 255, 0.1) !important;
-}

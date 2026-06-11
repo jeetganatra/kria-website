@@ -1,10 +1,14 @@
-import { useParams } from "react-router-dom";
+import {
+  Link,
+  useParams,
+} from "react-router-dom";
 import { projectsData } from "../../data/projects";
 import {
   useState,
   useEffect,
   useCallback,
 } from "react";
+import { Reveal } from "../Reveal";
 
 export interface ProjectImage {
   id: number;
@@ -99,10 +103,6 @@ function ImageCarousel({
           from { opacity: 0; transform: translateX(40px); }
           to   { opacity: 1; transform: translateX(0); }
         }
-        @keyframes slideInFromLeft {
-          from { opacity: 0; transform: translateX(-40px); }
-          to   { opacity: 1; transform: translateX(0); }
-        }
         @keyframes slideOutToLeft {
           from { opacity: 1; transform: translateX(0); }
           to   { opacity: 0; transform: translateX(-40px); }
@@ -131,7 +131,7 @@ function ImageCarousel({
           transition: background 0.15s ease, transform 0.15s ease;
         }
         .carousel-btn:hover {
-          background: rgba(255,255,255,0.18) !important;
+          background: rgba(243,238,229,0.18) !important;
           transform: scale(1.08);
         }
         .carousel-thumb {
@@ -142,13 +142,6 @@ function ImageCarousel({
           opacity: 1 !important;
           transform: scale(1.06);
         }
-        .carousel-close:hover {
-          background: rgba(255,255,255,0.15) !important;
-          transform: scale(1.08);
-        }
-        .carousel-close {
-          transition: background 0.15s ease, transform 0.15s ease;
-        }
       `}</style>
 
       {/* Backdrop */}
@@ -158,7 +151,7 @@ function ImageCarousel({
         style={{
           position: "fixed",
           inset: 0,
-          background: "rgba(0,0,0,0.92)",
+          background: "rgba(22, 18, 13, 0.95)",
           zIndex: 1000,
           display: "flex",
           flexDirection: "column",
@@ -172,7 +165,7 @@ function ImageCarousel({
           onClick={(e) => e.stopPropagation()}
           style={{
             width: "100%",
-            maxWidth: "900px",
+            maxWidth: "960px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -181,19 +174,20 @@ function ImageCarousel({
         >
           <span
             style={{
-              color: "rgba(255,255,255,0.55)",
-              fontSize: "13px",
-              letterSpacing: "0.08em",
+              color: "rgba(243,238,229,0.55)",
+              fontSize: "12px",
+              letterSpacing: "0.22em",
             }}
           >
-            {current + 1} / {images.length}
+            {String(current + 1).padStart(2, "0")}{" "}
+            / {String(images.length).padStart(2, "0")}
           </span>
           <button
-            className="carousel-close"
+            className="carousel-btn"
             onClick={onClose}
             style={{
               background:
-                "rgba(255,255,255,0.08)",
+                "rgba(243,238,229,0.08)",
               border: "none",
               borderRadius: "50%",
               width: "36px",
@@ -202,7 +196,7 @@ function ImageCarousel({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#fff",
+              color: "#f3eee5",
             }}
             aria-label="Close"
           >
@@ -214,8 +208,8 @@ function ImageCarousel({
             >
               <path
                 d="M2 2l12 12M14 2L2 14"
-                stroke="white"
-                strokeWidth="2"
+                stroke="currentColor"
+                strokeWidth="1.5"
                 strokeLinecap="round"
               />
             </svg>
@@ -230,7 +224,7 @@ function ImageCarousel({
             alignItems: "center",
             gap: "16px",
             width: "100%",
-            maxWidth: "900px",
+            maxWidth: "960px",
             padding: "0 16px",
           }}
         >
@@ -241,7 +235,7 @@ function ImageCarousel({
             style={{
               flexShrink: 0,
               background:
-                "rgba(255,255,255,0.08)",
+                "rgba(243,238,229,0.08)",
               border: "none",
               borderRadius: "50%",
               width: "44px",
@@ -250,7 +244,7 @@ function ImageCarousel({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#fff",
+              color: "#f3eee5",
             }}
             aria-label="Previous image"
           >
@@ -262,8 +256,8 @@ function ImageCarousel({
             >
               <path
                 d="M11 4L6 9l5 5"
-                stroke="white"
-                strokeWidth="2"
+                stroke="currentColor"
+                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -280,7 +274,6 @@ function ImageCarousel({
               minHeight: "300px",
               maxHeight: "65vh",
               overflow: "hidden",
-              borderRadius: "8px",
             }}
           >
             <img
@@ -292,7 +285,6 @@ function ImageCarousel({
                 maxWidth: "100%",
                 maxHeight: "65vh",
                 objectFit: "contain",
-                borderRadius: "6px",
                 display: "block",
               }}
             />
@@ -305,7 +297,7 @@ function ImageCarousel({
             style={{
               flexShrink: 0,
               background:
-                "rgba(255,255,255,0.08)",
+                "rgba(243,238,229,0.08)",
               border: "none",
               borderRadius: "50%",
               width: "44px",
@@ -314,7 +306,7 @@ function ImageCarousel({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#fff",
+              color: "#f3eee5",
             }}
             aria-label="Next image"
           >
@@ -326,8 +318,8 @@ function ImageCarousel({
             >
               <path
                 d="M7 4l5 5-5 5"
-                stroke="white"
-                strokeWidth="2"
+                stroke="currentColor"
+                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -343,7 +335,7 @@ function ImageCarousel({
               display: "flex",
               gap: "8px",
               overflowX: "auto",
-              maxWidth: "900px",
+              maxWidth: "960px",
               width: "100%",
               padding: "4px 16px 8px",
               scrollbarWidth: "none",
@@ -365,20 +357,15 @@ function ImageCarousel({
                   flexShrink: 0,
                   width: "60px",
                   height: "44px",
-                  borderRadius: "4px",
                   overflow: "hidden",
                   border:
                     i === current
-                      ? "2px solid white"
+                      ? "2px solid #f3eee5"
                       : "2px solid transparent",
                   padding: 0,
                   cursor: "pointer",
                   opacity:
                     i === current ? 1 : 0.45,
-                  boxShadow:
-                    i === current
-                      ? "0 0 0 1px rgba(255,255,255,0.3)"
-                      : "none",
                 }}
                 aria-label={`Go to image ${i + 1}`}
               >
@@ -411,74 +398,159 @@ export function ProjectDetail({
   const project = projectsData.find(
     (p) => p.id === Number(id),
   );
+  const projectIndex = projectsData.findIndex(
+    (p) => p.id === Number(id),
+  );
   const [lightboxIndex, setLightboxIndex] =
     useState<number | null>(null);
 
   if (!project) {
-    return <div>Project not found!</div>;
+    return (
+      <main className="px-6 py-24 text-left md:px-12">
+        <h1 className="text-4xl">
+          Project not found
+        </h1>
+        <Link
+          to="/projects"
+          className="link-underline mt-6 inline-block text-[11px] uppercase tracking-[0.22em] text-muted"
+        >
+          ← Back to all projects
+        </Link>
+      </main>
+    );
   }
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>{project.title}</h1>
-      <h2>{location}</h2>
-      {client && (
-        <h2 className="pt-5">Client: {client}</h2>
-      )}
+    <main className="text-left">
+      {/* Title block */}
+      <section className="px-6 pt-12 pb-10 md:px-12 md:pt-16 md:pb-14">
+        <Link
+          to="/projects"
+          className="rise link-underline inline-block text-[11px] uppercase tracking-[0.22em] text-muted transition-colors hover:text-ink"
+          style={{ animationDelay: "60ms" }}
+        >
+          ← All projects
+        </Link>
+
+        <div
+          className="rise mt-8 flex items-baseline gap-5"
+          style={{ animationDelay: "160ms" }}
+        >
+          <span className="font-display text-xl text-clay md:text-2xl">
+            {String(projectIndex + 1).padStart(
+              2,
+              "0",
+            )}
+          </span>
+          <h1 className="text-[clamp(2.4rem,6.5vw,5.5rem)] leading-[1] tracking-[-0.02em]">
+            {project.title}
+          </h1>
+        </div>
+
+        {/* Meta */}
+        <div
+          className="rise mt-10 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3"
+          style={{ animationDelay: "280ms" }}
+        >
+          <div className="border-t border-line pt-3">
+            <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
+              Location
+            </p>
+            <p className="mt-1 font-display text-lg md:text-xl">
+              {location}
+            </p>
+          </div>
+          {client && (
+            <div className="border-t border-line pt-3">
+              <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
+                Client
+              </p>
+              <p className="mt-1 font-display text-lg md:text-xl">
+                {client}
+              </p>
+            </div>
+          )}
+          <div className="border-t border-line pt-3">
+            <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
+              Gallery
+            </p>
+            <p className="mt-1 font-display text-lg md:text-xl">
+              {String(images.length).padStart(
+                2,
+                "0",
+              )}{" "}
+              images
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Overview */}
-      <div className="py-12 px-6">
-        <p className="text-sm text-gray-500 leading-relaxed text-justify">
-          {overview}
-        </p>
-      </div>
+      <section className="border-t border-line px-6 py-12 md:px-12 md:py-16">
+        <Reveal>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[200px_1fr] md:gap-12">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted">
+              Overview
+            </p>
+            <p className="max-w-[68ch] text-base leading-[1.8] text-ink/80 md:text-lg">
+              {overview}
+            </p>
+          </div>
+        </Reveal>
+      </section>
 
       {/* Gallery */}
-      <div className="py-8">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="text-xl font-medium text-gray-900">
-            Results
-          </h2>
-          <span className="text-sm text-gray-400">
-            {images.length} images
-          </span>
-        </div>
+      <section className="border-t border-line px-6 py-12 md:px-12 md:py-16">
+        <Reveal>
+          <div className="mb-8 flex items-baseline justify-between">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted">
+              Gallery
+            </p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
+              Click any image to expand
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="grid grid-cols-2 gap-2 px-4 sm:px-10 md:px-20 lg:px-40">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           {images.map((img, index) => (
-            <div
+            <Reveal
               key={img.id}
-              onClick={() =>
-                setLightboxIndex(index)
+              className={
+                img.span === 2
+                  ? "col-span-2"
+                  : ""
               }
-              className={`${img.aspectRatio ?? "aspect-[4/3]"} overflow-hidden rounded-lg group cursor-pointer ${
-                img.span === 2 ? "col-span-2" : ""
-              }`}
-              style={{ position: "relative" }}
+              delay={(index % 2) * 80}
             >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
-              />
-              {/* Hover overlay hint */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "rgba(0,0,0,0)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transition:
-                    "background 0.2s ease",
-                }}
-                className="group-hover:!bg-[rgba(0,0,0,0.25)]"
-              ></div>
-            </div>
+              <button
+                onClick={() =>
+                  setLightboxIndex(index)
+                }
+                className={`group relative block w-full overflow-hidden bg-cream ${
+                  img.aspectRatio ??
+                  "aspect-[4/3]"
+                }`}
+                aria-label={`Expand image: ${img.alt}`}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                />
+                <span className="absolute inset-0 bg-ink/0 transition-colors duration-300 group-hover:bg-ink/20" />
+                <span
+                  aria-hidden
+                  className="absolute right-3 bottom-3 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  ↗
+                </span>
+              </button>
+            </Reveal>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* Lightbox carousel */}
       {lightboxIndex !== null && (
@@ -488,6 +560,6 @@ export function ProjectDetail({
           onClose={() => setLightboxIndex(null)}
         />
       )}
-    </div>
+    </main>
   );
 }
